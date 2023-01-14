@@ -1,4 +1,41 @@
-/** NAVBAR */
-.nav-link {
-    color: black;
+/** IMPORTACIÓN DE FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+/** Elementos de la barra de navegación */
+li, a {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(113, 113, 113);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.nav-elementos {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-elementos li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav-elementos li a:hover {
+    color: rgb(0, 0, 0);
 }
