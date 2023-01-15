@@ -8,7 +8,7 @@
     background-color: rgb(255, 255, 255);
 }
 
-/** Elementos de la barra de navegación */
+/** Barra de navegación */
 li, a {
     font-family: "Roboto";
     font-weight: 500;
@@ -37,5 +37,36 @@ header {
 }
 
 .nav-elementos li a:hover {
-    color: rgb(0, 0, 0);
+    color: #000000
+}
+
+/** Inicio */
+
+.inicio {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 800px;
+}
+
+#espaciador1 {
+    position: absolute;
+    background-color: transparent;
+
+    bottom: 0;
+}
+
+.titulo {
+    position: absolute;
+    left: 5%;
+    bottom: 60%;
+    background-color: transparent;
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+.acercademi {
+    width: 100%;
+    height: 600px;
+    background-color: #f5dce0;
 }
