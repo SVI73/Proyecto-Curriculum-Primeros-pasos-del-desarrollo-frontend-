@@ -41,7 +41,6 @@ header {
 }
 
 /** Inicio */
-
 .inicio {
     position: relative;
     background-color: rgb(255, 255, 255);
@@ -52,8 +51,16 @@ header {
 #espaciador1 {
     position: absolute;
     background-color: transparent;
-
     bottom: 0;
+}
+
+#foto_banner {
+    position: absolute;
+    background-color: transparent;
+    bottom: 0;
+    height:auto;
+    width: 550px;
+    right: 10%;
 }
 
 .titulo {
@@ -65,8 +72,37 @@ header {
     font-weight: 700;
 }
 
+/** Acerca de mí */
 .acercademi {
     width: 100%;
+    padding: 78px 0px;
     height: 600px;
+    background-color: #f5dce0;
+}
+
+.acercademi img {
+    height: auto;
+    width: 175px;
+    border-radius: 50%;
+}
+
+.acercademi-texto {
+    width: 550px;
+    font-family: "Roboto";
+    font-weight: 400;
+    background-color: #f5dce0;
+}
+
+.acercademi-texto h3, p {
+    background-color: #f5dce0;
+}
+
+.contenedor {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     background-color: #f5dce0;
 }
