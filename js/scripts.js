@@ -1,11 +1,10 @@
-//Llama a la API de https://randomuser.me/ y recibe un usuario
-//generado aleatoriamente.
-//Una vez ejecutado nos provee con un JSON, XML, CSV o YAML
-//para usar en la aplicación
-$.ajax({
-    url: 'https://randomuser.me/api/',
-    dataType: 'json',
-    success: function(data) {
-      console.log(data);
-    }
-  });
+//Botón volver arriba
+const volverArriba = document.querySelector(".volver-arriba");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    volverArriba.classList.add("active");
+  } else {
+    volverArriba.classList.remove("active");
+  }
+})
