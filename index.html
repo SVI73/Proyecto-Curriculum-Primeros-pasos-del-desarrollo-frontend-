@@ -48,23 +48,23 @@
       <nav>
         <ul class="nav-elementos">
           <li>
-            <a href="#"><i class="bi bi-house-fill"></i> Inicio</a>
+            <a href="#inicio"><i class="bi bi-house-fill"></i> Inicio</a>
           </li>
           <li>
-            <a href="#"><i class="bi bi-file-earmark-person-fill"></i> Acerca de mí</a>
+            <a href="#acercademi"><i class="bi bi-file-earmark-person-fill"></i> Acerca de mí</a>
           </li>
           <li>
-            <a href="#"><i class="bi bi-building-fill"></i> Servicios</a>
+            <a href="#servicios"><i class="bi bi-building-fill"></i> Servicios</a>
           </li>
           <li>
-            <a href="#"><i class="bi bi-send-fill"></i> Contacto</a>
+            <a href="#contacto"><i class="bi bi-send-fill"></i> Contacto</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- Inicio -->
-    <div class="inicio">
+    <div class="inicio" id="inicio">
       <h1 class="titulo">Soy Shannon Reed, <br> <b>desarrolladora frontend</b></h1>
       <div class="inicio-imagen">
         <img id="foto_banner" src="./assets/img/foto_banner.png" alt="Foto de medio cuerpo del banner">
@@ -74,7 +74,7 @@
     
 
     <!-- Acerca de mí -->
-    <div class="acercademi">
+    <div class="acercademi" id="acercademi">
       <div class="acercademi-imgytexto">
         <div class="acercademi-imagen">
           <img class="imagen" src="./assets/img/foto_perfil.jpg" alt="Foto del perfil">
@@ -87,9 +87,26 @@
     </div>
 
     <!-- Servicios -->
-    <div class="servicios">
-      <img src="./assets/img/wave2.svg" alt="">
+    <div class="servicios" id="servicios">
+      <img id="espaciador2" class="espaciador" src="./assets/img/wave2.svg" alt="Espaciador entre acerca de mí y servicios">
+      <img id="espaciador3" class="espaciador" src="./assets/img/wave3.svg" alt="Espaciador entre servicios y contacto">
     </div>
+
+    <!-- Contacto -->
+    <div class="contacto" id="contacto">
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <div class="gradiente" id="gradiente"></div>
+        <div class="footer-texto">
+          <p>Elías Iván Bussanich | Rosario, Argentina. 2023</p>
+          <p>Proyecto "Primeros pasos en el Frontend" de Argentina Programa 4.0</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- Boton volver arriba -->
     <a href="#" class="volver-arriba">

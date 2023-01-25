@@ -1,11 +1,17 @@
 /** IMPORTACIÓN DE FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
+/** Estilos globales */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: rgb(255, 255, 255);
+}
+
+.espaciador {
+    position: absolute;
+    background-color: transparent;
 }
 
 /** Barra de navegación */
@@ -49,8 +55,6 @@ header {
 }
 
 #espaciador1 {
-    position: absolute;
-    background-color: transparent;
     bottom: 0;
 }
 
@@ -184,6 +188,49 @@ header {
         text-align: center;
         width: 280px;
     }
+}
+
+/** Servicios */
+.servicios {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding: 78px 0px;
+    height: 1200px;
+    background-color: lightblue;
+}
+
+#espaciador2 {
+    top: 0;
+}
+
+#espaciador3 {
+    bottom: 0;
+}
+
+/** Contacto */
+.contacto {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding: 78px 0px;
+    height: 600px;
+    background-color: #00cba9;
+}
+
+/** Footer */
+#gradiente {
+    background-image: linear-gradient(#00cba9, #00826c);
+    width: 100%;
+    height: 25px;
+}
+
+footer, .footer-texto p {
+    margin: 0;
+    display: block;
+    background-color: #00826c;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 /** Botón volver arriba */
