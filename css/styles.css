@@ -124,10 +124,11 @@ header {
 
 /** Acerca de mí */
 .acercademi {
+    display: flex;
     margin: 0;
     width: 100%;
     padding: 78px 0px;
-    height: 600px;
+    height: 100vh;
     background-color: #f5dce0;
 }
 
@@ -148,8 +149,26 @@ header {
     background-color: #f5dce0;
 }
 
-.acercademi-texto h3, .acercademi-texto p {
+.acercademi-texto h2, .acercademi-texto p {
     background-color: #f5dce0;
+}
+
+.acercademi-texto h2 {
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 10px;
+}
+
+.acercademi-texto h2::after {
+    content: "";
+    background: #f73030;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .acercademi-imgytexto {
@@ -164,7 +183,7 @@ header {
 
 @media screen and (max-width: 820px) {
     .acercademi {
-        height: 550px;
+        height: 650px;
     }
 
     .acercademi-imagen {
@@ -183,7 +202,7 @@ header {
         margin-top: 20px;
     }
 
-    .acercademi-texto h3, .acercademi-texto p {
+    .acercademi-texto h2, .acercademi-texto p {
         display: block;
         text-align: center;
         width: 280px;
@@ -247,7 +266,6 @@ header {
     padding: 25px 10px;
     border-radius: 5px;
     font-size: 14px;
-    cursor: pointer;
     background: transparent;
     transition: transform 0.3s, background 0.3s;
 }
@@ -280,14 +298,165 @@ header {
     bottom: 0;
 }
 
+@media screen and (min-width: 1290px) {
+    .fila {
+        grid-template-areas:
+          "a b c"
+          "d e f";
+    }
+
+    #servicio-prototipo {
+        grid-area: a;
+    }
+
+    #servicio-multiplataforma {
+        grid-area: b;
+    }
+
+    #servicio-ui {
+        grid-area: c;
+    }
+
+    #servicio-personalizado {
+        grid-area: d;
+    }
+
+    #servicio-control {
+        grid-area: e;
+    }
+
+    #servicio-soporte {
+        grid-area: f;
+    }
+}
+
+
 /** Contacto */
 .contacto {
+    display: flex;
     position: relative;
-    margin: 0;
-    width: 100%;
-    padding: 78px 0px;
-    height: 600px;
+    min-height: 100vh;
+    padding: 50px 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #00cba9;
+}
+
+.contacto-texto, 
+.contacto-contenido, 
+.info-contacto, 
+.contacto-mapa, 
+.contacto-elemento,
+.contacto-elemento .texto,
+.contacto h3, 
+.contacto p {
+    background: transparent;
+}
+
+.contacto-texto {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contacto-texto h2 {
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.contacto-texto h2::after {
+    content: "";
+    background: #bfffd9;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contacto-contenido {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.info-contacto {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-elemento {
+    display: flex;
+    position: relative;
+    padding: 20px 0;
+}
+
+.contacto-elemento .icono {
+    display: flex;
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contacto-elemento .texto {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;  
+}
+
+.contacto-mapa iframe {
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+    .contacto-contenido {
+        display: grid;
+        grid-template-areas:
+          "a"
+          "b";
+    }
+
+    .info-contacto {
+        grid-area: a;
+    }
+
+    .contacto-mapa {
+        grid-area: b;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contacto-contenido {
+        display: grid;
+        grid-template-areas:
+          "a"
+          "b";
+    }
+
+    .info-contacto {
+        grid-area: a;
+    }
+
+    .contacto-mapa {
+        grid-area: b;
+    }
+
+    .contacto-mapa iframe {
+        width: 80vw;
+    }
 }
 
 /** Footer */
