@@ -6,45 +6,122 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255);
+    list-style: none;
+}
+
+body {
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
 }
 
 .espaciador {
     position: absolute;
-    background-color: transparent;
 }
 
 /** Barra de navegación */
-header nav ul li, header nav ul li a {
-    font-family: "Roboto";
-    font-weight: 500;
-    font-size: 16px;
-    color: rgb(113, 113, 113);
-    text-decoration: none;
-}
-
 header {
+    width: 100%;
+    height: 90px;
+    background: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 30px;
+    justify-content: center;
+    padding: 0 100px;
 }
 
-.nav-elementos {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.menu {
+    display: none;
 }
 
-.nav-elementos li {
-    display: inline-block;
-    padding: 0px 10px;
+.navbar ul {
+    display: flex;
 }
 
-.nav-elementos li a:hover {
-    color: #000000
+.navbar ul li a {
+    display: block;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
+
+.menu i {
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.menu {
+    border-radius: 50%;
+}
+
+.navbar ul li a:hover, .menu:hover {
+    color: white;
+    background: rgb(0, 0, 0);
+}
+
+.navbar ul li a.activo {
+    color: white;
+    background: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 800px) {
+    .menu {
+        display: block;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .menu i {
+        font-size: 30px;
+        z-index: 2;
+    }
+
+    .navbar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        width: 100vw;
+        background: rgb(255, 255, 255);
+        transition: 0.2s;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .navbar.activo {
+        height: 100vh;
+        z-index: 2;
+    }
+
+    .navbar ul {
+        display: block;
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+        z-index: 2;
+        padding: 0;
+    }
+
+    .navbar.activo ul {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .navbar ul li a {
+        margin-bottom: 12px;
+        z-index: 2;
+    }
+}
+
 
 /** Inicio */
 .inicio {
@@ -60,18 +137,16 @@ header {
 
 #foto_banner {
     position: absolute;
-    background-color: transparent;
     bottom: 10%;
     height:auto;
     width: 650px;
-    right: 10%;
+    right: 15%;
 }
 
 .titulo {
     position: absolute;
-    left: 5%;
+    left: 15%;
     bottom: 60%;
-    background-color: transparent;
     font-family: "Roboto";
     font-weight: 500;
 }
@@ -82,14 +157,23 @@ header {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1275px) {
     #foto_banner {
-        bottom: 0;
+        left: 5%;
         right: 0;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .titulo {
-        bottom: 80%;
+        top: 7%;
+        left: 0;
+        right: 0;
+        position: relative;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
     }
 
 }
@@ -101,7 +185,7 @@ header {
 
     #foto_banner {
         width: 280px;
-        left: 0;
+        left: 2%;
         right: 0;
         top: 0;
         bottom: 0;
@@ -138,19 +222,10 @@ header {
     border-radius: 50%;
 }
 
-.acercademi-imagen {
-    background-color: #f5dce0;
-}
-
 .acercademi-texto {
     width: 550px;
     font-family: "Roboto";
     font-weight: 400;
-    background-color: #f5dce0;
-}
-
-.acercademi-texto h2, .acercademi-texto p {
-    background-color: #f5dce0;
 }
 
 .acercademi-texto h2 {
@@ -178,7 +253,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #f5dce0;
 }
 
 @media screen and (max-width: 820px) {
@@ -187,7 +261,6 @@ header {
     }
 
     .acercademi-imagen {
-        background-color: #f5dce0;
         width: 100%;
     }
 
@@ -211,16 +284,14 @@ header {
 
 /** Servicios */
 .servicios {
+    display: flex;
+    align-items: center;
     position: relative;
     margin: 0;
     width: 100%;
     padding: 78px 0px;
-    height: 1200px;
+    height: 190vh;
     background-color: lightblue;
-}
-
-.servicios .contenedor {
-    background-color: transparent;
 }
 
 #espaciador2 {
@@ -231,7 +302,6 @@ header {
     width: 100%;
     height: 100vh;
     padding: 0 8%;
-    background-color: transparent;
 }
 
 .contenedor h2 {
@@ -240,7 +310,6 @@ header {
     padding-top: 10%;
     margin-bottom: 60px;
     font-weight: 500;
-    background-color: transparent;
 }
 
 .contenedor h2::after {
@@ -258,7 +327,6 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
-    background-color: transparent;
 }
 
 .servicio {
@@ -266,7 +334,6 @@ header {
     padding: 25px 10px;
     border-radius: 5px;
     font-size: 14px;
-    background: transparent;
     transition: transform 0.3s, background 0.3s;
 }
 
@@ -278,10 +345,6 @@ header {
 
 .servicio h3 {
     margin-bottom: 8px;
-}
-
-.servicio i, .servicio h3, .servicio p {
-    background-color: transparent;
 }
 
 .servicio:hover {
@@ -330,6 +393,13 @@ header {
     }
 }
 
+@media screen and (max-width: 631px) {
+    .servicios {
+        display: block;
+        height: 200vh;
+    }
+}
+
 
 /** Contacto */
 .contacto {
@@ -343,17 +413,6 @@ header {
     background-color: #00cba9;
 }
 
-.contacto-texto, 
-.contacto-contenido, 
-.info-contacto, 
-.contacto-mapa, 
-.contacto-elemento,
-.contacto-elemento .texto,
-.contacto h3, 
-.contacto p {
-    background: transparent;
-}
-
 .contacto-texto {
     max-width: 800px;
     text-align: center;
@@ -365,12 +424,11 @@ header {
     padding-top: 10%;
     margin-bottom: 60px;
     font-weight: 500;
-    background-color: transparent;
 }
 
 .contacto-texto h2::after {
     content: "";
-    background: #bfffd9;
+    background: #1c703e;
     width: 100px;
     height: 5px;
     position: absolute;
@@ -501,5 +559,4 @@ footer, .footer-texto p {
 
 .volver-arriba i {
     font-size: 32px;
-    background-color: transparent;
 }
