@@ -464,6 +464,7 @@ header {
     display: flex;
     position: relative;
     padding: 20px 0;
+    width: max-content;
 }
 
 .contacto-elemento .icono {
@@ -483,6 +484,26 @@ header {
     font-size: 16px;
     flex-direction: column;  
 }
+
+.contacto-elemento .texto a {
+    display: inline-block;
+    width: fit-content;
+    background-color: black;
+    border-radius: 50px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+}
+
+#contacto-telefono .texto a:hover {
+    background-color: #4c9466;
+    transition: 0.2s;
+}
+
+#contacto-email .texto a:hover {
+    background-color: rgb(52, 103, 255);
+    transition: 0.2s;
+} 
 
 .contacto-mapa iframe {
     border-radius: 15px;
