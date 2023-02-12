@@ -12,6 +12,8 @@ Recursos utilizados para la creación del proyecto:
 
 * Foto de banner: https://www.dlf.pt/ddetail/hobTihw_thumb-image-business-woman-png-transparent-png-download/
 
+* Ícono de la página: https://www.flaticon.com/free-icon/curriculum-vitae_1150635
+
 -----------------------------------------------------------------------------------------
 
 Guías y tutoriales:
